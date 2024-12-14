@@ -9,7 +9,8 @@ section .data
 	var2_len: equ $-var2
 
 	key: db "1789-7654-0987-4532",10
-	key_len: equ $-key			; +1 because $-key calculates difference in bytes so 1 is short so I incremented it
+	key_len: equ $-key			;userinput when we press ENTER adds newline so the total length is taken to avoid bug
+								;you can use echo -n "input" | ./License <---- to avoid newline but first remove "10" from key variable
 
 section .bss
 
